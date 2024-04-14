@@ -9,6 +9,7 @@ function Authors() {
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
   const [editMode, setEditMode] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
 
@@ -92,6 +93,8 @@ function Authors() {
         <label htmlFor='name'>Username:</label>
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         <label htmlFor='name'>Email:</label>
+        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <label htmlFor='name'>Address:</label>
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         {editMode ? (
           <button onClick={handleUpdateUser}>Update User</button>
