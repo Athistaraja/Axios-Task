@@ -1,12 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate } from 'react-router-dom';
 
 function Topbar() {
     let navigate = useNavigate();
   return (
-    <Navbar expand="lg" className="bg-secondary">
+    <Navbar expand="lg" className="bg-warning">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -19,7 +20,7 @@ function Topbar() {
             </Nav.Link>
             <Nav.Link onClick={() => navigate("/create")}>
               <h5>
-                <b>Create</b>
+              <Button variant="success">Create</Button>
               </h5>
             </Nav.Link>
           </Nav>
